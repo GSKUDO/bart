@@ -1,12 +1,16 @@
-let rep = document.getElementById("repeticoes").value;
+let rep;
 let count = 0;
 let lousacont = 0;
 let lousaapagada = 0;
+let countfrases = 0;
+
+
 
 function lousa() {
+    rep = document.getElementById("repeticoes").value;
+    console.log (rep);
     while (rep > count) {
         if (lousacont < 11) {
-            document.getElementById("quadro").innerHTML = "frase do Bart";
             lousacont++;
             count++;
                 if (rep === count) {
@@ -17,6 +21,10 @@ function lousa() {
             lousaapagada ++;
         }
     }
-    document.getElementById("contadordelousa") = lousaapagada;
-    document.getElementById("quantosnalousa") = count;
+    while ( lousacont > countfrases) {
+        document.getElementById("quadro").innerHTML = document.getElementById("quadro").innerHTML + "\n" + "Eu não instigarei revoluções";
+        countfrases++;
+    }
+    document.getElementById("contadordelousa").innerHTML = "Quantidade de lousas apagadas: " + lousaapagada;
+    document.getElementById("quantosnalousa").innerHTML = "Quantos ficaram na lousa: " + lousacont;
 }

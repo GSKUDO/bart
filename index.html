@@ -8,12 +8,15 @@
 
     <body>
         <form>
-            <input id="repeticoes" type="number" placeholder="quantidade de repetições">
-            <button onclick="lousa()">Enviar</button>
+            <div id="horiz">
+                <input id="repeticoes" type="number" placeholder="quantidade de repetições">
+                <input type="button" value="Começar" id="botao" 
+                onclick="lousa()" placeholder="enviar">
+            </div>
+            <textarea id="quadro"></textarea>
+            <div id="contadordelousa"></div>
+            <div id="quantosnalousa"></div>
         </form>
-        <div id="quadro"></div>
-        <div id="contadordelousa"></div>
-        <div id="quantosnalousa"></div>
         <script src="bart.js"></script>
     </body>
 </html>
